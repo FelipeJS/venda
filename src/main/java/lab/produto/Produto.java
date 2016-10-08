@@ -2,73 +2,78 @@ package lab.produto;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Produto {
 
-  public static final String PERECIVEL = "perecivel";
+	public static final String PERECIVEL = "perecivel";
 
-  @Id
-  private Integer codigo;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer codigo;
+	@Column
+	private String tipo;
+	@Column
+	private String nome;
+	@Column
+	private Integer quantidade;
+	@Column
 
-  public Integer getCodigo() {
-    return codigo;
-  }
+	private Date data;
 
-  public void setCodigo(Integer codigo) {
-    this.codigo = codigo;
-  }
+	public Integer getCodigo() {
+		return codigo;
+	}
 
-  private String nome;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
 
-  public String getNome() {
-    return nome;
-  }
+	public String getNome() {
+		return nome;
+	}
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-  private String tipo;
+	public String getTipo() {
+		return tipo;
+	}
 
-  public String getTipo() {
-    return tipo;
-  }
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 
-  public void setTipo(String tipo) {
-    this.tipo = tipo;
-  }
+	public Integer getQuantidade() {
+		return quantidade;
+	}
 
-  private Integer quantidade;
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
 
-  public Integer getQuantidade() {
-    return quantidade;
-  }
+	public Date getData() {
+		return data;
+	}
 
-  public void setQuantidade(Integer quantidade) {
-    this.quantidade = quantidade;
-  }
+	public void setData(Date data) {
+		this.data = data;
+	}
 
-  private Date data;
+	public Produto() {
+	}
 
-  public Date getData() {
-    return data;
-  }
-
-  public void setData(Date data) {
-    this.data = data;
-  }
-
-  public Produto() {
-  }
-
-  public Produto(Integer codigo, String nome, String tipo, Integer quantidade) {
-    this.codigo = codigo;
-    this.nome = nome;
-    this.tipo = tipo;
-    this.quantidade = quantidade;
-  }
+	public Produto(Integer codigo, String nome, String tipo, Integer quantidade) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.tipo = tipo;
+		this.quantidade = quantidade;
+	}
 
 }

@@ -1,6 +1,8 @@
 package lab.venda;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,6 +17,7 @@ public class Venda {
 	public static final String PERECIVEL = "perecivel";
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer codigo;
 
 	@ManyToOne

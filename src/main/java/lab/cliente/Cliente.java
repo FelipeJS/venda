@@ -1,39 +1,35 @@
 package lab.cliente;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Cliente {
 
-  @Id
-  private Integer codigo;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer codigo;
 
-  public Integer getCodigo() {
-    return codigo;
-  }
+	@Column
+	private String nome;
 
-  public void setCodigo(Integer codigo) {
-    this.codigo = codigo;
-  }
+	public Integer getCodigo() {
+		return codigo;
+	}
 
-  private String nome;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
 
-  public String getNome() {
-    return nome;
-  }
+	public String getNome() {
+		return nome;
+	}
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-  public Cliente() {
-  }
-
-  public Cliente(Integer codigo, String nome) {
-    super();
-    this.codigo = codigo;
-    this.nome = nome;
-  }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 }
