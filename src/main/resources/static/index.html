@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="vendas">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendas</title>
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="lib/angularjs/js/angular.min.js"></script>
+<script src="lib/angularjs/js/angular-route.min.js"></script>
+<script type="text/javascript" src="vendas.js"></script>
+<script type="text/javascript" src="produtoCtrl.js"></script>
+<script type="text/javascript" src="clienteCtrl.js"></script>
+<script type="text/javascript" src="routeConfig.js"></script>
+</head>
+<body>
+	<a href="#/produto">Produto</a>
+	<br>
+	<a href="#/cliente">Cliente</a>
+	<div ng-view></div>
+	<script src="lib/jquery/js/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
