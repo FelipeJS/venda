@@ -1,4 +1,4 @@
-package lab.venda;
+package br.com.vendas.venda;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,9 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import lab.cliente.Cliente;
-import lab.produto.Produto;
-import lab.vendedor.Vendedor;
+import br.com.vendas.cliente.Cliente;
+import br.com.vendas.produto.Produto;
+import br.com.vendas.vendedor.Vendedor;
 
 @Entity
 public class Venda {

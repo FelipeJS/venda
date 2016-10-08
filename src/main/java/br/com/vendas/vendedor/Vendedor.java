@@ -1,4 +1,4 @@
-package lab.vendedor;
+package br.com.vendas.vendedor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

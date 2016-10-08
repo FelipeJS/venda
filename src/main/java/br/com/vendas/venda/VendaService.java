@@ -1,4 +1,4 @@
-package lab.venda;
+package br.com.vendas.venda;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

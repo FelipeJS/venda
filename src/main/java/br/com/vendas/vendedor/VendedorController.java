@@ -1,4 +1,4 @@
-package lab.vendedor;
+package br.com.vendas.vendedor;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;

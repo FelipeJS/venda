@@ -1,4 +1,4 @@
-package lab.cliente;
+package br.com.vendas.cliente;
 
 import org.springframework.data.repository.CrudRepository;
 

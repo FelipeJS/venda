@@ -1,4 +1,4 @@
-package lab.venda;
+package br.com.vendas.venda;
 
 import org.springframework.data.repository.CrudRepository;
 

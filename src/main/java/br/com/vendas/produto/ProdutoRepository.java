@@ -1,4 +1,4 @@
-package lab.produto;
+package br.com.vendas.produto;
 
 import java.util.Date;
 

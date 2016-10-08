@@ -1,4 +1,4 @@
-package lab.produto;
+package br.com.vendas.cliente;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -10,24 +10,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/produto")
-public class ProdutoController {
+@RequestMapping("/cliente")
+public class ClienteController {
   
   @Autowired
-  private ProdutoService produtoService;
+  private ClienteService clienteService;
   
   @RequestMapping(value = "/consultar", method = GET)
-  public Produto consultar(@RequestParam Integer codigo) {
-    return produtoService.obterProduto(codigo);
+  public Cliente consultar(@RequestParam Integer codigo) {
+    return clienteService.obterCliente(codigo);
   }
 
   @RequestMapping("/listar")
-  public Iterable<Produto> listar() {
-    return produtoService.obterTodos();
+  public Iterable<Cliente> listar() {
+    return clienteService.obterTodos();
   }
 
   @RequestMapping(value = "/novo", method = POST)
-  public Produto novo(@RequestBody Produto produto) {
-    return produtoService.registrarProduto(produto);
+  public Cliente novo(@RequestBody Cliente cliente) {
+    return clienteService.registrarCliente(cliente);
   }
 }
